@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akrem Ziani - Founder of Vocalype</title>
+  <meta name="description" content="Akrem Ziani is the founder of Vocalype, an AI voice assistant for post-call work and everyday writing.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Akrem Ziani - Founder of Vocalype">
+  <meta property="og:description" content="Founder of Vocalype, building AI voice tools for post-call work and everyday writing.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="./assets/vocalype-voice-card.svg">
+  <link rel="canonical" href="https://akremziani.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Akrem Ziani",
+    "url": "https://akremziani.com/",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Vocalype"
+    },
+    "description": "Akrem Ziani is the founder of Vocalype, an AI voice assistant for post-call work and everyday writing.",
+    "sameAs": [],
+    "knowsAbout": [
+      "AI voice assistants",
+      "voice AI",
+      "startup building",
+      "post-call workflows",
+      "dictation"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #111111;
+      --paper: #f8f5ee;
+      --panel: #ffffff;
+      --line: #d8d1c4;
+      --muted: #686158;
+      --green: #138a74;
+      --amber: #a44912;
+      --soft: #efe8db;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .announcement {
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 11px 16px;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+      background: rgba(248, 245, 238, 0.9);
+      backdrop-filter: blur(16px);
+    }
+
+    nav {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 850;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid var(--ink);
+      border-radius: 7px;
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 0 var(--ink);
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .button.green {
+      background: var(--green);
+      color: #ffffff;
+      border-color: var(--green);
+    }
+
+    .button.pending {
+      opacity: 0.72;
+      cursor: not-allowed;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 48px;
+      align-items: center;
+      min-height: calc(100vh - 116px);
+      padding: 52px 0 58px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 20px;
+      color: var(--amber);
+      font-size: 14px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--green);
+      display: inline-block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(52px, 8vw, 104px);
+      line-height: 0.92;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      margin: 26px 0 0;
+      max-width: 680px;
+      color: #27231f;
+      font-size: clamp(20px, 2.4vw, 29px);
+      line-height: 1.22;
+      font-weight: 650;
+    }
+
+    .hero-subcopy {
+      max-width: 640px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .proof-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .visual-card {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px;
+      box-shadow: 0 16px 0 rgba(17, 17, 17, 0.08);
+    }
+
+    .visual-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .mini-note {
+      position: absolute;
+      right: 8px;
+      bottom: 34px;
+      width: min(280px, 74%);
+      padding: 16px;
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 8px 8px 0 var(--ink);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    section {
+      padding: 70px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 36px;
+      margin-bottom: 32px;
+      align-items: end;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(34px, 4.6vw, 62px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .large-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .newsletter {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 28px;
+    }
+
+    .newsletter h2 {
+      font-size: clamp(30px, 4vw, 52px);
+      color: var(--paper);
+    }
+
+    .newsletter p {
+      max-width: 760px;
+      color: #d8d1c4;
+      margin: 12px 0 0;
+      font-size: 17px;
+    }
+
+    .newsletter .button {
+      border-color: var(--paper);
+      color: var(--paper);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 230px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--green);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.05;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .number {
+      background: var(--panel);
+      padding: 26px;
+      min-height: 170px;
+    }
+
+    .number b {
+      display: block;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .number span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 22px;
+      border-top: 1px solid var(--line);
+      padding: 20px 0;
+    }
+
+    .timeline-item time {
+      color: var(--amber);
+      font-weight: 850;
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .quote-wall {
+      columns: 3 260px;
+      column-gap: 18px;
+    }
+
+    .quote {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 18px;
+      break-inside: avoid;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 20px;
+    }
+
+    .quote p {
+      margin: 0;
+      color: #2b2722;
+      font-weight: 650;
+    }
+
+    .quote small {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .media-list {
+      display: grid;
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .media-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      background: var(--panel);
+      padding: 22px 24px;
+      text-decoration: none;
+    }
+
+    .media-row span {
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .final {
+      text-align: center;
+      padding: 84px 0;
+    }
+
+    .final h2 {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .final p {
+      max-width: 680px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .final .hero-actions {
+      justify-content: center;
+    }
+
+    footer {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    @media (max-width: 880px) {
+      .announcement { font-size: 13px; }
+      nav {
+        min-height: auto;
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding-top: 42px;
+      }
+      .section-head,
+      .newsletter {
+        grid-template-columns: 1fr;
+      }
+      .grid,
+      .numbers {
+        grid-template-columns: 1fr;
+      }
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .media-row {
+        grid-template-columns: 1fr;
+      }
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      main,
+      nav,
+      footer {
+        width: min(100% - 28px, 1180px);
+      }
+      .hero-actions .button {
+        width: 100%;
+      }
+      .mini-note {
+        position: static;
+        width: 100%;
+        margin-top: 14px;
+        box-shadow: 5px 5px 0 var(--ink);
+      }
+      section {
+        padding: 52px 0;
+      }
+      .newsletter {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">Building Vocalype in public: AI voice tools for the work that happens after calls.</div>
+  <header>
+    <nav aria-label="Primary navigation">
+      <a class="brand" href="#top">Akrem Ziani</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#vocalype">Vocalype</a>
+        <a href="#writing">Writing</a>
+        <a href="#proof">Proof</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Akrem Ziani intro">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Founder of Vocalype</div>
+        <h1>Building the voice layer for modern work.</h1>
+        <p class="hero-copy">I'm Akrem Ziani, founder of Vocalype. I'm building AI voice tools that turn calls, notes, and spoken thoughts into useful work output.</p>
+        <p class="hero-subcopy">This is the public home for my founder story, product notes, startup lessons, and the journey of building Vocalype from the ground up.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#vocalype">See Vocalype</a>
+          <a class="button" href="#writing">Read the story</a>
+        </div>
+        <div class="proof-row" aria-label="Public identity proof points">
+          <span>AI voice assistant</span>
+          <span>Post-call work</span>
+          <span>Startup building</span>
+        </div>
+      </div>
+      <div class="visual-card">
+        <img src="./assets/vocalype-voice-card.svg" alt="Vocalype voice AI product visual">
+        <div class="mini-note">Goal: make voice the fastest way to capture notes, follow-ups, updates, and everyday writing.</div>
+      </div>
+    </section>
+
+    <section aria-label="Newsletter">
+      <div class="newsletter">
+        <div>
+          <h2>Follow the build.</h2>
+          <p>I share what I'm learning while building Vocalype: product decisions, voice AI challenges, startup execution, user feedback, and mistakes.</p>
+        </div>
+        <a class="button pending" href="#" aria-label="LinkedIn link to add">Follow on LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <h2>Who is Akrem Ziani?</h2>
+        <p>Akrem Ziani is the founder of Vocalype, an AI voice assistant for post-call work and everyday writing. He is building in public around voice AI, product execution, and the practical workflows that happen after conversations.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <strong>Founder</strong>
+          <h3>Building Vocalype</h3>
+          <p>A product focused on turning speech into structured, useful text for real professional workflows.</p>
+        </article>
+        <article class="card">
+          <strong>Focus</strong>
+          <h3>Voice AI for work</h3>
+          <p>Dictation is only the start. The hard part is transforming messy spoken input into usable notes, messages, and updates.</p>
+        </article>
+        <article class="card">
+          <strong>Public story</strong>
+          <h3>Documenting the journey</h3>
+          <p>Sharing product lessons, startup mistakes, customer discovery, and the reality of building from zero.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="vocalype">
+      <div class="section-head">
+        <h2>Vocalype</h2>
+        <p>Vocalype is an AI voice assistant for post-call work and everyday writing. It helps people speak naturally, then convert that input into notes, follow-ups, CRM updates, emails, messages, and documents.</p>
+      </div>
+      <div class="numbers">
+        <div class="number">
+          <b>1</b>
+          <span>main mission: make spoken work usable</span>
+        </div>
+        <div class="number">
+          <b>3</b>
+          <span>core outputs: notes, follow-ups, writing</span>
+        </div>
+        <div class="number">
+          <b>0</b>
+          <span>fake vanity metrics on this page</span>
+        </div>
+        <div class="number">
+          <b>2026</b>
+          <span>public founder story starts here</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="section-head">
+        <h2>Writing</h2>
+        <p>The first essays should make Google, LinkedIn, and AI systems understand the same identity: Akrem Ziani, founder of Vocalype, building AI voice tools.</p>
+      </div>
+      <div class="media-list">
+        <a class="media-row" href="#">
+          <strong>Why I started Vocalype</strong>
+          <span>Founder story</span>
+        </a>
+        <a class="media-row" href="#">
+          <strong>The hidden cost of post-call work</strong>
+          <span>Workflow essay</span>
+        </a>
+        <a class="media-row" href="#">
+          <strong>Building an AI voice product from zero</strong>
+          <span>Product notes</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="section-head">
+        <h2>Wall of proof</h2>
+        <p>This section is ready for real customer quotes, podcast clips, investor notes, user testimonials, Product Hunt comments, or media mentions. Keep it real and verifiable.</p>
+      </div>
+      <div class="quote-wall">
+        <article class="quote">
+          <p>"Add a real quote from a user, customer, founder, or advisor here."</p>
+          <small>Confirmed source needed</small>
+        </article>
+        <article class="quote">
+          <p>"Add a real podcast, interview, or newsletter mention here once published."</p>
+          <small>Confirmed source needed</small>
+        </article>
+        <article class="quote">
+          <p>"Add a short public testimonial about Vocalype or Akrem's work."</p>
+          <small>Confirmed source needed</small>
+        </article>
+        <article class="quote">
+          <p>"Add a concrete product result only when the number is verified."</p>
+          <small>Confirmed metric needed</small>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Timeline</h2>
+        <p>A clear founder timeline helps search engines and people understand the story without guessing.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <time>Now</time>
+          <div>
+            <h3>Building Vocalype</h3>
+            <p>Developing an AI voice assistant for post-call work and everyday writing.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time>Next</time>
+          <div>
+            <h3>Publishing the founder story</h3>
+            <p>Writing the public essays, demos, and product notes that explain the mission clearly.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time>Soon</time>
+          <div>
+            <h3>Building public proof</h3>
+            <p>Adding real user quotes, demos, interviews, launches, and verified traction as they happen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="final">
+      <h2>I'm building Vocalype in public.</h2>
+      <p>If you care about voice AI, productivity, post-call workflows, or the real process of building a startup from zero, follow the journey.</p>
+      <div class="hero-actions">
+        <a class="button primary pending" href="#" aria-label="LinkedIn link to add">LinkedIn</a>
+        <a class="button pending" href="#" aria-label="Facebook link to add">Facebook</a>
+        <a class="button green pending" href="#" aria-label="Vocalype link to add">Vocalype</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Akrem Ziani - Founder of Vocalype</span>
+    <span>AI voice tools for post-call work and everyday writing.</span>
+  </footer>
+</body>
+</html>
