@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://www.akremziani.com/">
   <meta property="og:image" content="https://www.akremziani.com/assets/vocalype-voice-card.svg">
   <link rel="canonical" href="https://www.akremziani.com/">
+  <link rel="icon" type="image/svg+xml" href="./assets/akrem-logo.svg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,9 +106,20 @@
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 900;
       letter-spacing: 0;
       text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      box-shadow: 0 4px 0 rgba(11, 12, 15, 0.16);
+      flex: 0 0 auto;
     }
 
     .nav-center,
@@ -706,7 +718,10 @@
 <body>
   <header class="topbar">
     <nav class="wrap" aria-label="Primary navigation">
-      <a class="brand" href="#top">Akrem Ziani</a>
+    <a class="brand" href="#top" aria-label="Akrem Ziani home">
+      <img class="brand-mark" src="./assets/akrem-logo.svg" alt="" width="34" height="34">
+      <span>Akrem Ziani</span>
+    </a>
       <div class="nav-center">
         <a href="#about">About</a>
         <a href="#vocalype">Vocalype</a>
