@@ -306,7 +306,7 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1px;
-      margin: 28px 0 0;
+      margin: 0;
       border: 1px solid var(--line);
       border-radius: 24px;
       overflow: hidden;
@@ -338,6 +338,101 @@
     section {
       padding: 92px 0;
       border-bottom: 1px solid var(--line);
+    }
+
+    .identity-strip {
+      padding: 0 0 92px;
+      margin-top: -24px;
+    }
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .identity-card,
+    .signal-card {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.028)),
+        rgba(20, 20, 22, 0.74);
+      padding: 28px;
+    }
+
+    .identity-card {
+      min-height: 300px;
+      display: grid;
+      align-content: space-between;
+      box-shadow: 0 0 90px rgba(255, 99, 99, 0.08);
+    }
+
+    .identity-card h2 {
+      max-width: 760px;
+      margin-top: 12px;
+    }
+
+    .identity-card p {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .identity-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .identity-links a {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 12px;
+      color: var(--paper);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 820;
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .signal-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .signal-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .signal-card b {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      background: rgba(255, 99, 99, 0.14);
+      color: var(--paper-2);
+      font-size: 18px;
+      font-weight: 950;
+    }
+
+    .signal-card h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .signal-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
     }
 
     .section-head {
@@ -502,6 +597,44 @@
       align-items: stretch;
     }
 
+    .proof-map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      background: var(--line);
+      margin-top: 22px;
+    }
+
+    .proof-map article {
+      min-height: 190px;
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    }
+
+    .proof-map small {
+      display: block;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .proof-map strong {
+      display: block;
+      margin-top: 18px;
+      font-size: 26px;
+      line-height: 1.02;
+    }
+
+    .proof-map p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
     .quote,
     .stack {
       border: 1px solid var(--line);
@@ -624,6 +757,7 @@
 
       .hero,
       .section-head,
+      .identity-grid,
       .proof-panel {
         grid-template-columns: 1fr;
       }
@@ -634,7 +768,8 @@
       }
 
       .work-grid,
-      .metrics {
+      .metrics,
+      .proof-map {
         grid-template-columns: 1fr;
       }
 
@@ -758,12 +893,6 @@
           <a class="btn" href="/vocalype/">Explore Vocalype</a>
           <a class="btn secondary" href="/writing/why-i-started-vocalype/">Read the founder story</a>
         </div>
-        <div class="metrics" aria-label="Founder proof points">
-          <div class="metric"><b>25</b><span>students recruited and trained for cold calling</span></div>
-          <div class="metric"><b>600+</b><span>cold calls made to local businesses</span></div>
-          <div class="metric"><b>$500</b><span>first client closed through direct sales</span></div>
-          <div class="metric"><b>1</b><span>main company now: Vocalype</span></div>
-        </div>
       </div>
 
       <aside class="hero-visual" aria-label="Akrem public founder visual">
@@ -778,6 +907,76 @@
           </div>
         </div>
       </aside>
+    </section>
+
+    <section class="identity-strip" aria-label="Public identity summary">
+      <div class="identity-grid">
+        <article class="identity-card">
+          <div>
+            <p class="kicker">Public identity</p>
+            <h2>Akrem Ziani is the founder of Vocalype.</h2>
+            <p>That sentence needs to be easy for Google, ChatGPT, investors, customers, and strangers to understand. This site now repeats the same clear public identity across the homepage, profile page, product page, writing, structured data, and social links.</p>
+          </div>
+          <div class="identity-links" aria-label="Primary public links">
+            <a href="/about/">Founder profile</a>
+            <a href="/vocalype/">Vocalype page</a>
+            <a href="/writing/">Writing hub</a>
+            <a href="https://github.com/akremziani">GitHub</a>
+            <a href="https://www.linkedin.com/in/akrem-ziani-678093408">LinkedIn</a>
+          </div>
+        </article>
+
+        <div class="signal-grid" aria-label="Founder signals">
+          <article class="signal-card">
+            <b>AI</b>
+            <div>
+              <h3>Company signal</h3>
+              <p>Founder of Vocalype, an AI desktop voice assistant for dictation, post-call notes, follow-ups, and everyday writing.</p>
+            </div>
+          </article>
+          <article class="signal-card">
+            <b>0-1</b>
+            <div>
+              <h3>Builder signal</h3>
+              <p>Built websites, Windows desktop tools, product surfaces, account flows, billing, and feedback workflows.</p>
+            </div>
+          </article>
+          <article class="signal-card">
+            <b>Sales</b>
+            <div>
+              <h3>Operator signal</h3>
+              <p>Recruited 25 student callers, made 600+ cold calls, and closed a first $500 client before focusing on Vocalype.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Proof</p>
+          <h2>Concrete signals first. Hype later.</h2>
+        </div>
+        <div>
+          <p class="big">The site should make the record legible without pretending there is press that does not exist yet.</p>
+          <p class="body">The strongest public footprint is a simple loop: a clear personal domain, a focused founder profile, a real company page, consistent social profiles, visible writing, and concrete proof from shipped work.</p>
+        </div>
+      </div>
+
+      <div class="metrics" aria-label="Founder proof points">
+        <div class="metric"><b>25</b><span>students recruited and trained for cold calling</span></div>
+        <div class="metric"><b>600+</b><span>cold calls made to local businesses</span></div>
+        <div class="metric"><b>$500</b><span>first client closed through direct sales</span></div>
+        <div class="metric"><b>1</b><span>main company now: Vocalype</span></div>
+      </div>
+
+      <div class="proof-map" aria-label="Public footprint map">
+        <article><small>Home</small><strong>Name and role</strong><p>Akrem Ziani, founder of Vocalype, is the first message.</p></article>
+        <article><small>About</small><strong>Profile page</strong><p>Search engines get a dedicated page answering who Akrem is.</p></article>
+        <article><small>Product</small><strong>Vocalype context</strong><p>The company and product category are linked to the founder.</p></article>
+        <article><small>Writing</small><strong>Founder story</strong><p>Articles teach the web the same narrative over time.</p></article>
+      </div>
     </section>
 
     <section id="work">
@@ -863,28 +1062,28 @@
       </div>
     </section>
 
-    <section id="proof">
+    <section id="next-proof">
       <div class="section-head">
         <div>
-          <p class="kicker">Proof</p>
-          <h2>Public credibility without pretending.</h2>
+          <p class="kicker">Next proof</p>
+          <h2>What to add next.</h2>
         </div>
         <div>
-          <p class="big">The right founder site does not fake press. It makes the real record easier to understand.</p>
+          <p class="big">The foundation is now clear. The next step is adding more real signals over time.</p>
         </div>
       </div>
       <div class="proof-panel">
         <article class="quote">
-          <p>“Access is often not about status. It is about creating the right context to ask.”</p>
+          <p>"Access is often not about status. It is about creating the right context to ask."</p>
           <span>Founder lesson from interviewing strangers, selling services, and building from no network.</span>
         </article>
         <aside class="stack">
           <ul>
-            <li>Public website: akremziani.com</li>
-            <li>Company: Vocalype</li>
-            <li>GitHub: public profile and shipped repos</li>
-            <li>Social: LinkedIn and X linked through structured data</li>
-            <li>Next proof to add: real founder photo, demo videos, user quotes</li>
+            <li>Add a real founder photo when ready</li>
+            <li>Publish short Vocalype demo videos on YouTube</li>
+            <li>Write one founder note every week</li>
+            <li>Add customer or user quotes only when real</li>
+            <li>Keep LinkedIn, GitHub, X, and this site consistent</li>
           </ul>
         </aside>
       </div>
