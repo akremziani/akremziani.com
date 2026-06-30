@@ -191,6 +191,7 @@
       line-height: 0.84;
       letter-spacing: 0;
       font-weight: 950;
+      overflow-wrap: anywhere;
     }
 
     .hero-lede {
@@ -262,8 +263,8 @@
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
+      aspect-ratio: 3 / 1;
+      object-fit: contain;
     }
 
     .build-card {
@@ -352,14 +353,22 @@
       align-items: stretch;
     }
 
+    .identity-grid > *,
+    .signal-grid > * {
+      min-width: 0;
+    }
+
     .identity-card,
     .signal-card {
+      min-width: 0;
+      max-width: 100%;
       border: 1px solid var(--line);
       border-radius: 28px;
       background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.028)),
         rgba(20, 20, 22, 0.74);
       padding: 28px;
+      overflow: hidden;
     }
 
     .identity-card {
@@ -370,7 +379,7 @@
     }
 
     .identity-card h2 {
-      max-width: 760px;
+      max-width: 100%;
       margin-top: 12px;
     }
 
@@ -460,6 +469,7 @@
       line-height: 0.94;
       letter-spacing: 0;
       font-weight: 940;
+      overflow-wrap: anywhere;
     }
 
     .big {
@@ -470,6 +480,7 @@
       font-weight: 820;
       color: var(--paper-2);
       letter-spacing: 0;
+      overflow-wrap: anywhere;
     }
 
     .body {
@@ -487,6 +498,7 @@
 
     .work-card {
       min-height: 360px;
+      min-width: 0;
       border: 1px solid var(--line);
       border-radius: 28px;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
@@ -572,6 +584,8 @@
       padding: 28px;
     }
 
+    .timeline-row > * { min-width: 0; }
+
     .timeline-row time {
       color: var(--blue);
       font-weight: 900;
@@ -610,6 +624,7 @@
 
     .proof-map article {
       min-height: 190px;
+      min-width: 0;
       padding: 24px;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
     }
@@ -818,8 +833,15 @@
         line-height: 0.9;
       }
 
+      h2 {
+        max-width: 100%;
+        font-size: 34px;
+        line-height: 0.96;
+      }
+
       .hero-lede,
       .hero-copy,
+      .identity-card p,
       .big,
       .body {
         max-width: 340px;
@@ -827,13 +849,36 @@
 
       .hero-lede,
       .big {
-        font-size: 27px;
+        font-size: 25px;
+      }
+
+      .identity-card,
+      .signal-card,
+      .quote,
+      .stack {
+        padding: 22px;
+      }
+
+      .identity-links {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .identity-links a {
+        max-width: 100%;
+        overflow-wrap: anywhere;
       }
 
       .hero-visual {
+        max-width: 100%;
         padding: 12px;
         border-radius: 22px;
         box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.28);
+      }
+
+      .banner-frame,
+      .banner-frame img {
+        max-width: 100%;
       }
 
       .build-card {
@@ -859,6 +904,45 @@
 
       footer {
         flex-direction: column;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .wrap {
+        width: calc(100% - 24px);
+      }
+
+      .nav-center {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 8px;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: 46px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .hero-lede,
+      .big {
+        font-size: 22px;
+      }
+
+      .hero-copy,
+      .body,
+      .identity-card p {
+        font-size: 16px;
+      }
+
+      .hero-visual {
+        box-shadow: none;
+      }
+
+      .build-card {
+        grid-template-columns: 1fr;
       }
     }
   </style>
