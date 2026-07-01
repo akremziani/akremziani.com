@@ -19,13 +19,9 @@
     "@type": "Person",
     "name": "Akrem Ziani",
     "url": "https://www.akremziani.com/",
-    "jobTitle": "Founder",
+    "jobTitle": "Founder of Vocalype",
     "email": "mailto:akrem@vocalype.com",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Vocalype",
-      "url": "https://vocalype.com"
-    },
+    "worksFor": { "@type": "Organization", "name": "Vocalype", "url": "https://vocalype.com" },
     "description": "Akrem Ziani is the Montreal-based founder of Vocalype, building AI voice tools for dictation and post-call workflows.",
     "sameAs": [
       "https://www.linkedin.com/in/akrem-ziani-678093408",
@@ -33,33 +29,23 @@
       "https://x.com/AkremZiani",
       "https://vocalype.com"
     ],
-    "knowsAbout": [
-      "AI voice assistants",
-      "voice AI",
-      "desktop applications",
-      "post-call workflows",
-      "dictation",
-      "sales systems"
-    ]
+    "knowsAbout": ["AI voice assistants", "voice AI", "desktop applications", "post-call workflows", "dictation", "sales systems"]
   }
   </script>
   <style>
     :root {
-      --ink: #0a0a0a;
-      --graphite: #111113;
-      --panel: #141416;
-      --raised: #1c1c1f;
-      --paper: #f5f5f5;
-      --paper-2: #ffffff;
-      --muted: #a1a1a1;
-      --muted-dark: #6b6b6b;
-      --line: rgba(255, 255, 255, 0.09);
-      --line-dark: rgba(255, 255, 255, 0.09);
-      --gold: #ff6363;
-      --teal: #13a88b;
-      --blue: #4b74ff;
-      --red: #ff6363;
-      --white: #ffffff;
+      --ink: #050506;
+      --panel: #0d0f14;
+      --raised: #151922;
+      --paper: #f7f8ff;
+      --muted: rgba(247, 248, 255, 0.62);
+      --line: rgba(255, 255, 255, 0.12);
+      --blue: #536dff;
+      --cyan: #79ddff;
+      --lime: #d9ff39;
+      --soft: #eaf2ff;
+      --soft-2: #f7fbff;
+      --dark-text: #10131b;
     }
 
     * { box-sizing: border-box; }
@@ -73,676 +59,438 @@
       margin: 0;
       color: var(--paper);
       background:
-        radial-gradient(70% 46% at 50% 0%, rgba(255, 99, 99, 0.2), transparent 72%),
-        radial-gradient(42% 28% at 82% 18%, rgba(75, 116, 255, 0.1), transparent 66%),
-        linear-gradient(180deg, #0d0d0e 0%, #07080a 54%, #050506 100%);
+        radial-gradient(44% 32% at 18% 18%, rgba(83, 109, 255, 0.28), transparent 72%),
+        radial-gradient(38% 28% at 80% 50%, rgba(121, 221, 255, 0.18), transparent 72%),
+        linear-gradient(135deg, #11182a 0%, #050506 44%, #060709 100%);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.45;
       overflow-x: hidden;
       text-rendering: geometricPrecision;
     }
 
-    a {
-      color: inherit;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
-    }
+    a { color: inherit; }
 
     .wrap {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
+    }
+
+    .ribbon {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 8px 18px;
+      background: #fff;
+      color: #090b10;
+      font-size: 14px;
+      font-weight: 720;
+      text-align: center;
+    }
+
+    .ribbon strong {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 0.08em;
     }
 
     .topbar {
       position: sticky;
-      top: 14px;
-      z-index: 30;
-      border-bottom: 0;
-      background: transparent;
+      top: 16px;
+      z-index: 40;
       pointer-events: none;
     }
 
     nav {
-      min-height: 76px;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      width: max-content;
+      max-width: calc(100vw - 28px);
+      min-height: 62px;
+      display: flex;
       align-items: center;
-      gap: 22px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
-      background: rgba(20, 20, 20, 0.62);
-      padding: 0 18px;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(8, 9, 12, 0.62);
       backdrop-filter: blur(20px);
-      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.36);
       pointer-events: auto;
     }
 
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      text-decoration: none;
-      letter-spacing: 0;
-    }
-
-    .brand img {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.13);
-    }
-
-    .nav-center,
-    .nav-right {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 760;
-    }
-
-    .nav-center a,
-    .nav-right a {
-      text-decoration: none;
-    }
-
-    .nav-right {
-      justify-content: flex-end;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 9px 13px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 999px;
-      color: var(--paper);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .hero {
-      min-height: calc(100vh - 76px);
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
-      gap: 56px;
-      align-items: center;
-      padding: 76px 0 64px;
-      border-bottom: 1px solid var(--line);
-      padding-top: 104px;
-    }
-
-    .hero > * { min-width: 0; }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    h1 {
-      margin: 18px 0 0;
-      max-width: 780px;
-      font-size: clamp(64px, 10vw, 132px);
-      line-height: 0.84;
-      letter-spacing: 0;
-      font-weight: 950;
-      overflow-wrap: anywhere;
-    }
-
-    .hero-lede {
-      max-width: 760px;
-      margin: 28px 0 0;
-      font-size: clamp(24px, 3vw, 38px);
-      line-height: 1.06;
-      letter-spacing: 0;
-      font-weight: 780;
-      color: var(--paper-2);
-    }
-
-    .hero-copy {
-      max-width: 660px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .btn {
+    nav a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 13px 18px;
-      border: 1px solid var(--paper);
-      border-radius: 14px;
-      background: var(--paper);
-      color: var(--ink);
-      text-decoration: none;
-      font-weight: 860;
-      box-shadow: 0 0 55px rgba(255, 99, 99, 0.18);
-    }
-
-    .btn.secondary {
-      background: transparent;
-      color: var(--paper);
-      box-shadow: none;
-    }
-
-    .hero-visual {
-      position: relative;
-      border: 1px solid rgba(255, 255, 255, 0.11);
-      border-radius: 30px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
-        #141416;
-      padding: 18px;
-      box-shadow:
-        0 0 110px rgba(255, 99, 99, 0.14),
-        0 26px 100px rgba(0, 0, 0, 0.5);
-    }
-
-    .banner-frame {
-      border: 1px solid rgba(255, 255, 255, 0.11);
-      border-radius: 24px;
-      overflow: hidden;
-      background: var(--graphite);
-    }
-
-    .banner-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 3 / 1;
-      object-fit: contain;
-    }
-
-    .build-card {
-      position: absolute;
-      left: -22px;
-      right: 34px;
-      bottom: -28px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 14px;
-      align-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 22px;
-      background: rgba(20, 20, 22, 0.92);
-      padding: 16px;
-      backdrop-filter: blur(16px);
-    }
-
-    .build-card img {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-    }
-
-    .build-card strong {
-      display: block;
-      font-size: 16px;
-      line-height: 1.1;
-    }
-
-    .build-card span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 650;
-    }
-
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      margin: 0;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      overflow: hidden;
-      background: var(--line);
-    }
-
-    .metric {
-      min-height: 150px;
-      padding: 22px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035));
-    }
-
-    .metric b {
-      display: block;
-      font-size: clamp(32px, 4.4vw, 54px);
-      line-height: 1;
-      color: var(--paper-2);
-      letter-spacing: 0;
-    }
-
-    .metric span {
-      display: block;
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 720;
-    }
-
-    section {
-      padding: 92px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .identity-strip {
-      padding: 0 0 92px;
-      margin-top: -24px;
-    }
-
-    .identity-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .identity-grid > *,
-    .signal-grid > * {
-      min-width: 0;
-    }
-
-    .identity-card,
-    .signal-card {
-      min-width: 0;
-      max-width: 100%;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.028)),
-        rgba(20, 20, 22, 0.74);
-      padding: 28px;
-      overflow: hidden;
-    }
-
-    .identity-card {
-      min-height: 300px;
-      display: grid;
-      align-content: space-between;
-      box-shadow: 0 0 90px rgba(255, 99, 99, 0.08);
-    }
-
-    .identity-card h2 {
-      max-width: 100%;
-      margin-top: 12px;
-    }
-
-    .identity-card p {
-      max-width: 720px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .identity-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 28px;
-    }
-
-    .identity-links a {
-      border: 1px solid var(--line);
+      min-height: 42px;
+      padding: 0 18px;
       border-radius: 999px;
-      padding: 9px 12px;
-      color: var(--paper);
+      color: rgba(255, 255, 255, 0.88);
       text-decoration: none;
-      font-size: 13px;
-      font-weight: 820;
-      background: rgba(255, 255, 255, 0.055);
+      font-size: 14px;
+      font-weight: 860;
+      white-space: nowrap;
     }
 
-    .signal-grid {
-      display: grid;
-      gap: 18px;
+    nav a:last-child {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
     }
 
-    .signal-card {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-
-    .signal-card b {
+    .hero {
+      min-height: calc(100vh - 42px);
       display: grid;
       place-items: center;
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      background: rgba(255, 99, 99, 0.14);
-      color: var(--paper-2);
-      font-size: 18px;
+      padding: 118px 0 180px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-inner {
+      width: min(1000px, 100%);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(58px, 7.6vw, 116px);
+      line-height: 1.08;
+      letter-spacing: 0;
       font-weight: 950;
     }
 
-    .signal-card h3 {
-      margin: 0 0 8px;
-      font-size: 22px;
-      line-height: 1;
+    .muted-word {
+      color: rgba(255, 255, 255, 0.42);
     }
 
-    .signal-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
+    .inline-logo,
+    .inline-face {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      transform: translateY(-0.08em);
     }
 
-    .section-head {
+    .inline-face {
+      width: 1.42em;
+      height: 0.9em;
+      border: 2px solid rgba(255, 255, 255, 0.62);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 36% 42%, #fff 0 7%, transparent 8%),
+        radial-gradient(circle at 64% 42%, #fff 0 7%, transparent 8%),
+        linear-gradient(135deg, #536dff, #79ddff);
+      box-shadow: 0 12px 50px rgba(83, 109, 255, 0.42);
+    }
+
+    .inline-logo {
+      width: 0.98em;
+      height: 0.98em;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .inline-logo img {
+      width: 66%;
+      height: 66%;
+      object-fit: contain;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 19px;
+    }
+
+    .access-box {
+      width: min(560px, 100%);
+      min-height: 64px;
       display: grid;
-      grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
-      gap: 64px;
-      align-items: start;
-      margin-bottom: 44px;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      margin: 44px auto 0;
+      padding: 7px;
+      border: 4px solid #fff;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 24px 90px rgba(83, 109, 255, 0.22);
     }
 
-    .section-head > * { min-width: 0; }
+    .access-box span {
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      color: #8a8fa1;
+      font-size: 15px;
+      text-align: left;
+    }
 
-    .kicker {
-      margin: 0;
-      color: var(--gold);
-      font-size: 13px;
+    .access-box a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 13px;
+      background: #050506;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
       font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .float-badge {
+      position: fixed;
+      right: 0;
+      top: 44%;
+      z-index: 30;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 50px;
+      border-radius: 10px 0 0 10px;
+      background: rgba(255, 255, 255, 0.14);
+      color: var(--lime);
+      font-size: 30px;
+      font-weight: 900;
+      backdrop-filter: blur(14px);
+    }
+
+    .section-soft {
+      margin-top: -92px;
+      padding: 120px 0 94px;
+      border-radius: 42px 42px 0 0;
+      background: var(--soft);
+      color: var(--dark-text);
+    }
+
+    .section-white {
+      padding: 96px 0;
+      background: #fff;
+      color: var(--dark-text);
+    }
+
+    .section-dark {
+      padding: 96px 0;
+      background: #050506;
+      color: #fff;
+    }
+
+    .label {
+      width: max-content;
+      margin: 0 auto 18px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(83, 109, 255, 0.12);
+      color: #3564a8;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      letter-spacing: 0;
     }
 
     h2 {
-      margin: 10px 0 0;
-      font-size: clamp(38px, 5.6vw, 76px);
-      line-height: 0.94;
-      letter-spacing: 0;
-      font-weight: 940;
-      overflow-wrap: anywhere;
-    }
-
-    .big {
-      margin: 0;
       max-width: 820px;
-      font-size: clamp(26px, 3.2vw, 44px);
-      line-height: 1.06;
-      font-weight: 820;
-      color: var(--paper-2);
+      margin: 0 auto 42px;
+      font-size: clamp(38px, 5vw, 72px);
+      line-height: 0.98;
+      text-align: center;
       letter-spacing: 0;
-      overflow-wrap: anywhere;
     }
 
-    .body {
-      max-width: 760px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .work-grid {
+    .proof-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .work-card {
-      min-height: 360px;
-      min-width: 0;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-      overflow: hidden;
+    .proof-card {
+      min-height: 250px;
+      padding: 28px;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 22px 60px rgba(22, 35, 56, 0.08);
     }
 
-    .work-media {
-      min-height: 180px;
-      background: #0c0e13;
-      border-bottom: 1px solid var(--line);
+    .proof-card.dark {
+      background: #0f121a;
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .proof-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .avatar {
       display: grid;
       place-items: center;
-      overflow: hidden;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: #111;
+      color: #fff;
+      font-weight: 950;
     }
 
-    .work-media img {
+    .proof-card small {
+      color: #607086;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .proof-card strong {
       display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.05;
     }
 
-    .work-media.logo img {
-      width: 96px;
-      height: 96px;
-      object-fit: contain;
-    }
-
-    .work-body {
-      padding: 24px;
-    }
-
-    .work-body small {
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .work-body h3 {
-      margin: 10px 0 10px;
-      font-size: 28px;
-      line-height: 1.02;
-      letter-spacing: 0;
-    }
-
-    .work-body p {
+    .proof-card p {
       margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .light {
-      margin-left: calc((100vw - min(1180px, calc(100vw - 40px))) / -2);
-      margin-right: calc((100vw - min(1180px, calc(100vw - 40px))) / -2);
-      padding-left: calc((100vw - min(1180px, calc(100vw - 40px))) / 2);
-      padding-right: calc((100vw - min(1180px, calc(100vw - 40px))) / 2);
-      background:
-        radial-gradient(55% 35% at 50% 0%, rgba(255, 99, 99, 0.12), transparent 72%),
-        #050506;
-      color: var(--paper);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .light .kicker { color: var(--red); }
-    .light .big { color: var(--paper-2); }
-    .light .body { color: var(--muted); }
-
-    .timeline {
-      display: grid;
-      gap: 1px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: var(--line);
-      overflow: hidden;
-    }
-
-    .timeline-row {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 28px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035));
-      padding: 28px;
-    }
-
-    .timeline-row > * { min-width: 0; }
-
-    .timeline-row time {
-      color: var(--blue);
-      font-weight: 900;
-    }
-
-    .timeline-row h3 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      line-height: 1.02;
-      letter-spacing: 0;
-    }
-
-    .timeline-row p {
-      margin: 0;
-      color: var(--muted);
+      color: #344056;
       font-size: 17px;
     }
 
-    .proof-panel {
+    .proof-card.dark p,
+    .proof-card.dark small {
+      color: rgba(255, 255, 255, 0.66);
+    }
+
+    .product-row {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+      grid-template-columns: 1fr 1fr;
       gap: 22px;
       align-items: stretch;
     }
 
-    .proof-map {
+    .product-visual {
+      min-height: 420px;
+      border-radius: 26px;
+      overflow: hidden;
+      background: #0b0d12;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.12);
+    }
+
+    .product-visual img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .product-copy {
+      min-height: 420px;
+      display: grid;
+      align-content: center;
+      padding: 46px;
+      border-radius: 26px;
+      background: #f4f7ff;
+    }
+
+    .product-copy h2 {
+      margin: 0 0 24px;
+      text-align: left;
+    }
+
+    .product-copy p {
+      max-width: 520px;
+      margin: 0 0 26px;
+      color: #4c5870;
+      font-size: 18px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill-list span {
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: #fff;
+      color: #1b2333;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .journey {
+      display: grid;
+      gap: 1px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 26px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .journey-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      padding: 30px;
+      background: #0d1017;
+    }
+
+    .journey-row time {
+      color: var(--cyan);
+      font-weight: 950;
+    }
+
+    .journey-row h3 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .journey-row p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 17px;
+    }
+
+    .link-wall {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      overflow: hidden;
-      background: var(--line);
-      margin-top: 22px;
-    }
-
-    .proof-map article {
-      min-height: 190px;
-      min-width: 0;
-      padding: 24px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-    }
-
-    .proof-map small {
-      display: block;
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .proof-map strong {
-      display: block;
-      margin-top: 18px;
-      font-size: 26px;
-      line-height: 1.02;
-    }
-
-    .proof-map p {
-      margin: 12px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .quote,
-    .stack {
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-      padding: 30px;
-    }
-
-    .quote p {
-      margin: 0;
-      font-size: clamp(26px, 3.2vw, 44px);
-      line-height: 1.08;
-      font-weight: 820;
-      letter-spacing: 0;
-    }
-
-    .quote span {
-      display: block;
-      margin-top: 22px;
-      color: var(--muted);
-      font-weight: 760;
-    }
-
-    .stack ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
       gap: 14px;
     }
 
-    .stack li {
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 16px;
-      font-weight: 650;
-    }
-
-    .writing-list {
+    .link-wall a {
+      min-height: 124px;
       display: grid;
-      gap: 1px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      overflow: hidden;
-      background: var(--line);
-    }
-
-    .writing-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
-      padding: 30px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+      align-content: space-between;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.055);
+      color: #fff;
       text-decoration: none;
+      font-weight: 900;
     }
 
-    .writing-row strong {
-      font-size: clamp(24px, 3vw, 40px);
-      line-height: 1.02;
-      letter-spacing: 0;
-    }
-
-    .writing-row span {
-      color: var(--muted);
-      font-weight: 820;
-      white-space: nowrap;
-    }
-
-    .final {
-      min-height: 72vh;
-      display: grid;
-      align-items: center;
-      text-align: center;
-      border-bottom: 0;
-    }
-
-    .final h2 {
-      max-width: 960px;
-      margin: 0 auto;
-      font-size: clamp(54px, 8.8vw, 118px);
-    }
-
-    .final p {
-      max-width: 720px;
-      margin: 24px auto 0;
-      color: var(--muted);
-      font-size: 19px;
-    }
-
-    .final .actions {
-      justify-content: center;
+    .link-wall span {
+      color: rgba(255, 255, 255, 0.54);
+      font-size: 13px;
+      font-weight: 760;
     }
 
     footer {
@@ -750,45 +498,20 @@
       justify-content: space-between;
       gap: 20px;
       padding: 34px 0 48px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
+      background: #050506;
+      color: rgba(255, 255, 255, 0.52);
       font-size: 14px;
-      font-weight: 720;
+      font-weight: 760;
     }
 
-    @media (max-width: 920px) {
-      nav {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 16px;
-        box-sizing: border-box;
-      }
-
-      .nav-center,
-      .nav-right {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .hero,
-      .section-head,
-      .identity-grid,
-      .proof-panel {
+    @media (max-width: 860px) {
+      .proof-grid,
+      .product-row,
+      .link-wall {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        min-height: auto;
-        padding-top: 56px;
-      }
-
-      .work-grid,
-      .metrics,
-      .proof-map {
-        grid-template-columns: 1fr;
-      }
-
-      .timeline-row {
+      .journey-row {
         grid-template-columns: 1fr;
       }
     }
@@ -798,417 +521,193 @@
         width: calc(100% - 28px);
       }
 
-      .topbar {
-        top: 10px;
+      .ribbon {
+        justify-content: flex-start;
+        text-align: left;
       }
 
       nav {
-        border-radius: 22px;
-        min-height: 0;
-      }
-
-      .brand {
-        gap: 10px;
-      }
-
-      .nav-right {
-        display: none;
-      }
-
-      .nav-center {
+        width: calc(100vw - 28px);
         display: grid;
-        width: 100%;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 4px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-radius: 22px;
+      }
+
+      nav a {
+        min-width: 0;
+        padding: 0 10px;
         font-size: 13px;
       }
 
-      .nav-center a {
-        min-width: 0;
+      .hero {
+        min-height: auto;
+        padding: 78px 0 132px;
       }
 
       h1 {
-        max-width: 340px;
-        font-size: 54px;
-        line-height: 0.9;
+        font-size: 46px;
+        line-height: 1.04;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .access-box {
+        grid-template-columns: 1fr;
+        border-width: 3px;
+      }
+
+      .access-box span,
+      .access-box a {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .float-badge {
+        display: none;
+      }
+
+      .section-soft {
+        margin-top: -70px;
+        padding: 84px 0 70px;
+        border-radius: 30px 30px 0 0;
+      }
+
+      .section-white,
+      .section-dark {
+        padding: 72px 0;
       }
 
       h2 {
-        max-width: 100%;
-        font-size: 34px;
-        line-height: 0.96;
+        font-size: 36px;
       }
 
-      .hero-lede,
-      .hero-copy,
-      .identity-card p,
-      .big,
-      .body {
-        max-width: 340px;
+      .proof-card,
+      .product-copy,
+      .journey-row {
+        padding: 24px;
       }
 
-      .hero-lede,
-      .big {
-        font-size: 25px;
+      .product-visual,
+      .product-copy {
+        min-height: auto;
       }
 
-      .identity-card,
-      .signal-card,
-      .quote,
-      .stack {
-        padding: 22px;
-      }
-
-      .identity-links {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .identity-links a {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-      }
-
-      .hero-visual {
-        max-width: 100%;
-        padding: 12px;
-        border-radius: 22px;
-        box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.28);
-      }
-
-      .banner-frame,
-      .banner-frame img {
-        max-width: 100%;
-      }
-
-      .build-card {
-        position: static;
-        margin-top: 12px;
-      }
-
-      .actions .btn {
-        width: 100%;
-      }
-
-      section {
-        padding: 66px 0;
-      }
-
-      .writing-row {
-        grid-template-columns: 1fr;
-      }
-
-      .writing-row span {
-        white-space: normal;
+      .product-visual img {
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
       }
 
       footer {
         flex-direction: column;
       }
     }
-
-    @media (max-width: 380px) {
-      .wrap {
-        width: calc(100% - 24px);
-      }
-
-      .nav-center {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 8px;
-      }
-
-      h1 {
-        max-width: 100%;
-        font-size: 46px;
-      }
-
-      h2 {
-        font-size: 32px;
-      }
-
-      .hero-lede,
-      .big {
-        font-size: 22px;
-      }
-
-      .hero-copy,
-      .body,
-      .identity-card p {
-        font-size: 16px;
-      }
-
-      .hero-visual {
-        box-shadow: none;
-      }
-
-      .build-card {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 <body>
+  <div class="ribbon"><strong>BUILDING</strong><span>Follow Akrem Ziani building Vocalype in public, from product to first proof.</span></div>
+
   <header class="topbar">
-    <nav class="wrap" aria-label="Primary navigation">
-      <a class="brand" href="/" aria-label="Akrem Ziani home">
-        <img src="./assets/akrem-logo.svg" alt="" width="38" height="38">
-        <span>Akrem Ziani</span>
-      </a>
-      <div class="nav-center">
-        <a href="/about/">About</a>
-        <a href="/vocalype/">Vocalype</a>
-        <a href="/writing/">Writing</a>
-        <a href="#work">Work</a>
-      </div>
-      <div class="nav-right">
-        <a class="pill" href="mailto:akrem@vocalype.com">Contact</a>
-      </div>
+    <nav aria-label="Primary navigation">
+      <a href="/vocalype/">Vocalype</a>
+      <a href="/writing/">Writing</a>
+      <a href="/about/">About</a>
+      <a href="mailto:akrem@vocalype.com">Contact</a>
     </nav>
   </header>
 
-  <main class="wrap">
-    <section class="hero" id="top">
-      <div>
-        <p class="eyebrow">Montreal-based founder</p>
-        <h1>Building voice AI into real work.</h1>
-        <p class="hero-lede">I am Akrem Ziani, founder of Vocalype. I build desktop products, sales systems, and public proof from zero.</p>
-        <p class="hero-copy">Vocalype turns spoken calls and thoughts into notes, follow-ups, CRM updates, emails, and useful writing. Before that, I built websites, a student cold-calling team, and Windows desktop tools.</p>
-        <div class="actions">
-          <a class="btn" href="/vocalype/">Explore Vocalype</a>
-          <a class="btn secondary" href="/writing/why-i-started-vocalype/">Read the founder story</a>
+  <div class="float-badge" aria-hidden="true">*</div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner wrap">
+        <h1>
+          Hey, I'm <span class="inline-face" aria-hidden="true"></span> Akrem Ziani,<br>
+          Founder <span class="muted-word">of</span> <span class="inline-logo"><img src="./assets/proof/vocalype-logo.svg" alt=""></span> Vocalype,<br>
+          builder <span class="muted-word">of</span> voice AI tools.
+        </h1>
+        <p class="hero-copy">Montreal-based founder building Vocalype, an AI desktop voice assistant for dictation, post-call notes, follow-ups, CRM updates, emails, and everyday writing.</p>
+        <div class="access-box" aria-label="Primary links">
+          <span>Akrem Ziani - Founder of Vocalype</span>
+          <a href="/writing/why-i-started-vocalype/">Read the founder story -></a>
         </div>
       </div>
-
-      <aside class="hero-visual" aria-label="Akrem public founder visual">
-        <div class="banner-frame">
-          <img src="./assets/proof/akrem-founder-banner.png" alt="Akrem Ziani founder banner for Vocalype">
-        </div>
-        <div class="build-card">
-          <img src="./assets/proof/vocalype-logo.svg" alt="" width="46" height="46">
-          <div>
-            <strong>Vocalype</strong>
-            <span>Desktop AI voice assistant for dictation and post-call workflows.</span>
-          </div>
-        </div>
-      </aside>
     </section>
 
-    <section class="identity-strip" aria-label="Public identity summary">
-      <div class="identity-grid">
-        <article class="identity-card">
-          <div>
-            <p class="kicker">Public identity</p>
-            <h2>Akrem Ziani is the founder of Vocalype.</h2>
-            <p>That sentence needs to be easy for Google, ChatGPT, investors, customers, and strangers to understand. This site now repeats the same clear public identity across the homepage, profile page, product page, writing, structured data, and social links.</p>
-          </div>
-          <div class="identity-links" aria-label="Primary public links">
-            <a href="/about/">Founder profile</a>
-            <a href="/vocalype/">Vocalype page</a>
-            <a href="/writing/">Writing hub</a>
-            <a href="https://github.com/akremziani">GitHub</a>
-            <a href="https://www.linkedin.com/in/akrem-ziani-678093408">LinkedIn</a>
-          </div>
-        </article>
-
-        <div class="signal-grid" aria-label="Founder signals">
-          <article class="signal-card">
-            <b>AI</b>
-            <div>
-              <h3>Company signal</h3>
-              <p>Founder of Vocalype, an AI desktop voice assistant for dictation, post-call notes, follow-ups, and everyday writing.</p>
-            </div>
+    <section class="section-soft" id="proof">
+      <div class="wrap">
+        <p class="label">Public proof</p>
+        <h2>Real signals, not fake status.</h2>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <div class="proof-top"><div class="avatar">25</div><small>Lazo Growth</small></div>
+            <strong>Student callers recruited and trained.</strong>
+            <p>Before Vocalype, Akrem built a student cold-calling team while learning direct sales.</p>
           </article>
-          <article class="signal-card">
-            <b>0-1</b>
-            <div>
-              <h3>Builder signal</h3>
-              <p>Built websites, Windows desktop tools, product surfaces, account flows, billing, and feedback workflows.</p>
-            </div>
+          <article class="proof-card">
+            <div class="proof-top"><div class="avatar">600+</div><small>Direct outreach</small></div>
+            <strong>Cold calls to local businesses.</strong>
+            <p>The early operator proof is simple: build, call, sell, learn, repeat.</p>
           </article>
-          <article class="signal-card">
-            <b>Sales</b>
-            <div>
-              <h3>Operator signal</h3>
-              <p>Recruited 25 student callers, made 600+ cold calls, and closed a first $500 client before focusing on Vocalype.</p>
-            </div>
+          <article class="proof-card">
+            <div class="proof-top"><div class="avatar">$500</div><small>First client</small></div>
+            <strong>First paying client closed through sales.</strong>
+            <p>No inflated story. Just a real first customer milestone from Lazo Growth.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="proof">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Proof</p>
-          <h2>Concrete signals first. Hype later.</h2>
+    <section class="section-white" id="vocalype">
+      <div class="wrap product-row">
+        <div class="product-visual">
+          <img src="./assets/proof/akrem-founder-banner.png" alt="Vocalype founder banner">
         </div>
-        <div>
-          <p class="big">The site should make the record legible without pretending there is press that does not exist yet.</p>
-          <p class="body">The strongest public footprint is a simple loop: a clear personal domain, a focused founder profile, a real company page, consistent social profiles, visible writing, and concrete proof from shipped work.</p>
-        </div>
-      </div>
-
-      <div class="metrics" aria-label="Founder proof points">
-        <div class="metric"><b>25</b><span>students recruited and trained for cold calling</span></div>
-        <div class="metric"><b>600+</b><span>cold calls made to local businesses</span></div>
-        <div class="metric"><b>$500</b><span>first client closed through direct sales</span></div>
-        <div class="metric"><b>1</b><span>main company now: Vocalype</span></div>
-      </div>
-
-      <div class="proof-map" aria-label="Public footprint map">
-        <article><small>Home</small><strong>Name and role</strong><p>Akrem Ziani, founder of Vocalype, is the first message.</p></article>
-        <article><small>About</small><strong>Profile page</strong><p>Search engines get a dedicated page answering who Akrem is.</p></article>
-        <article><small>Product</small><strong>Vocalype context</strong><p>The company and product category are linked to the founder.</p></article>
-        <article><small>Writing</small><strong>Founder story</strong><p>Articles teach the web the same narrative over time.</p></article>
-      </div>
-    </section>
-
-    <section id="work">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Work</p>
-          <h2>Not a resume. A trail of things built.</h2>
-        </div>
-        <div>
-          <p class="big">The site should make one thing obvious: Akrem builds, sells, ships, learns, and keeps going.</p>
-          <p class="body">This page uses real public artifacts: Vocalype assets, product screenshots, the public GitHub profile, and concrete numbers from Lazo Growth.</p>
-        </div>
-      </div>
-
-      <div class="work-grid">
-        <article class="work-card">
-          <div class="work-media">
-            <img src="./assets/proof/vocalype-app-preview.png" alt="Vocalype app preview">
-          </div>
-          <div class="work-body">
-            <small>Current company</small>
-            <h3>Vocalype</h3>
-            <p>AI desktop voice assistant for dictation, post-call notes, follow-ups, and everyday writing.</p>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="work-media">
-            <img src="./assets/proof/vocalype-site-home.png" alt="Vocalype marketing website preview">
-          </div>
-          <div class="work-body">
-            <small>Product surface</small>
-            <h3>Voice to output</h3>
-            <p>Built around the work after speech: notes, CRM updates, messages, documentation, and follow-up.</p>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="work-media logo">
-            <img src="./assets/proof/cleansnap-icon.svg" alt="CleanSnap app icon">
-          </div>
-          <div class="work-body">
-            <small>Earlier builds</small>
-            <h3>Desktop tools</h3>
-            <p>Windows tools including a screenshot utility and a lightweight screen recording/editor prototype.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="light" id="story">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Background</p>
-          <h2>Built from direct sales and product obsession.</h2>
-        </div>
-        <div>
-          <p class="big">Before Vocalype, I learned by building and selling directly.</p>
-          <p class="body">I built websites for local businesses, then founded Lazo Growth. I recruited and trained a 25-student cold-calling team, made over 600 calls to local businesses, and closed a first $500 client. That experience made post-call work feel obvious: every conversation creates notes, follow-ups, and context someone has to write later.</p>
-        </div>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-row">
-          <time>2022-2024</time>
-          <div>
-            <h3>Lazo Webs</h3>
-            <p>Built websites for local businesses and learned how to get clients while still in high school.</p>
-          </div>
-        </div>
-        <div class="timeline-row">
-          <time>2024-2026</time>
-          <div>
-            <h3>Lazo Growth</h3>
-            <p>Built a digital marketing agency, trained a student cold-calling team, and sold through direct outreach.</p>
-          </div>
-        </div>
-        <div class="timeline-row">
-          <time>Now</time>
-          <div>
-            <h3>Vocalype</h3>
-            <p>Building the desktop app, transcription pipeline, cloud/local routing, accounts, billing, and feedback workflows.</p>
+        <div class="product-copy">
+          <h2>Vocalype turns speech into work.</h2>
+          <p>Vocalype is built around the work that happens after speaking: notes, summaries, CRM updates, follow-ups, emails, and useful writing.</p>
+          <div class="pill-list">
+            <span>Dictation</span>
+            <span>Post-call notes</span>
+            <span>Follow-ups</span>
+            <span>CRM updates</span>
+            <span>Everyday writing</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="next-proof">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Next proof</p>
-          <h2>What to add next.</h2>
+    <section class="section-dark" id="journey">
+      <div class="wrap">
+        <p class="label">Entrepreneurial journey</p>
+        <h2>From local websites to voice AI.</h2>
+        <div class="journey">
+          <article class="journey-row">
+            <time>2022 - 2024</time>
+            <div><h3>Lazo Webs</h3><p>Built websites for local businesses and learned how to create a service people could understand and buy.</p></div>
+          </article>
+          <article class="journey-row">
+            <time>2024 - 2026</time>
+            <div><h3>Lazo Growth</h3><p>Built a digital marketing agency, recruited a student sales team, made 600+ cold calls, and closed a first $500 client.</p></div>
+          </article>
+          <article class="journey-row">
+            <time>Now</time>
+            <div><h3>Vocalype</h3><p>Building the desktop app, AI voice workflow, account flows, billing, feedback loops, and public founder footprint.</p></div>
+          </article>
         </div>
-        <div>
-          <p class="big">The foundation is now clear. The next step is adding more real signals over time.</p>
-        </div>
-      </div>
-      <div class="proof-panel">
-        <article class="quote">
-          <p>"Access is often not about status. It is about creating the right context to ask."</p>
-          <span>Founder lesson from interviewing strangers, selling services, and building from no network.</span>
-        </article>
-        <aside class="stack">
-          <ul>
-            <li>Add a real founder photo when ready</li>
-            <li>Publish short Vocalype demo videos on YouTube</li>
-            <li>Write one founder note every week</li>
-            <li>Add customer or user quotes only when real</li>
-            <li>Keep LinkedIn, GitHub, X, and this site consistent</li>
-          </ul>
-        </aside>
       </div>
     </section>
 
-    <section id="writing">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Writing</p>
-          <h2>Teach search engines the story.</h2>
-        </div>
-        <div>
-          <p class="big">Every page reinforces the same identity: Akrem Ziani, founder of Vocalype, building voice AI for real workflows.</p>
-        </div>
-      </div>
-
-      <div class="writing-list">
-        <a class="writing-row" href="/writing/why-i-started-vocalype/">
-          <strong>Why I started Vocalype</strong>
-          <span>Founder story</span>
-        </a>
-        <a class="writing-row" href="/vocalype/">
-          <strong>What Vocalype is built for</strong>
-          <span>Product page</span>
-        </a>
-        <a class="writing-row" href="/about/">
-          <strong>Who is Akrem Ziani?</strong>
-          <span>Profile page</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="final" id="links">
-      <div>
-        <h2>Follow the build.</h2>
-        <p>Akrem Ziani, Montreal-based founder of Vocalype. Building AI voice tools for dictation and post-call workflows.</p>
-        <div class="actions">
-          <a class="btn" href="https://www.linkedin.com/in/akrem-ziani-678093408">LinkedIn</a>
-          <a class="btn secondary" href="https://github.com/akremziani">GitHub</a>
-          <a class="btn secondary" href="https://x.com/AkremZiani">X</a>
-          <a class="btn secondary" href="mailto:akrem@vocalype.com">Email</a>
+    <section class="section-dark" id="links">
+      <div class="wrap">
+        <p class="label">Start here</p>
+        <h2>Everything should point to one clear identity.</h2>
+        <div class="link-wall">
+          <a href="/about/">Who is Akrem Ziani?<span>Founder profile</span></a>
+          <a href="/vocalype/">What is Vocalype?<span>Product context</span></a>
+          <a href="/writing/why-i-started-vocalype/">Why Vocalype?<span>Founder story</span></a>
+          <a href="https://github.com/akremziani">GitHub<span>Public build proof</span></a>
         </div>
       </div>
     </section>
