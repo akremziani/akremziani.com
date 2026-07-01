@@ -1,0 +1,10 @@
+<svg width="86" height="16" viewBox="0 0 86 16" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <polygon id="star" points="8,1 10.2,5.4 15,6.1 11.5,9.5 12.3,14.3 8,12 3.7,14.3 4.5,9.5 1,6.1 5.8,5.4"/>
+  </defs>
+  <use href="#star" fill="#3E23FF"/>
+  <use href="#star" x="17.5" fill="#3E23FF"/>
+  <use href="#star" x="35" fill="#3E23FF"/>
+  <use href="#star" x="52.5" fill="#3E23FF"/>
+  <use href="#star" x="70" fill="#3E23FF"/>
+</svg>
