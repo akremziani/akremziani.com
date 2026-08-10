@@ -1,8 +1,28 @@
 {
   "redirects": [
     {
+      "source": "/vocalype",
+      "destination": "/onzaris/",
+      "permanent": true
+    },
+    {
+      "source": "/vocalype/",
+      "destination": "/onzaris/",
+      "permanent": true
+    },
+    {
       "source": "/vocalype/:path*",
       "destination": "/onzaris/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/writing/why-i-started-vocalype",
+      "destination": "/writing/why-i-started-onzaris/",
+      "permanent": true
+    },
+    {
+      "source": "/writing/why-i-started-vocalype/",
+      "destination": "/writing/why-i-started-onzaris/",
       "permanent": true
     },
     {
