@@ -6,4 +6,4 @@ Live site: https://akremziani.com
 
 ## About
 
-Akrem Ziani is the founder of [Onzaris](https://www.onzaris.com), a bilingual sports operations platform for leagues, clubs, tournaments, and officials.
+Akrem Ziani is the founder of [Onzaris](https://www.onzaris.com), a sports operations platform for leagues, clubs, tournaments, and officials.
