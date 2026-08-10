@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/vocalype/:path*",
+      "destination": "/onzaris/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/writing/why-i-started-vocalype/:path*",
+      "destination": "/writing/why-i-started-onzaris/:path*",
+      "permanent": true
+    }
+  ]
+}
