@@ -3,5 +3,5 @@
   <path d="M112 380L210 132H270L368 380H307L288 329H190L171 380H112Z" fill="#F6F3EC"/>
   <path d="M207 282H271L239 194L207 282Z" fill="#0B0C0F"/>
   <path d="M221 380V333L331 185H238V132H414V179L304 327H420V380H221Z" fill="#F6F3EC"/>
-  <path d="M112 414H400" stroke="#F2B84B" stroke-width="22" stroke-linecap="round"/>
+  <path d="M112 414H400" stroke="#0A5BFF" stroke-width="22" stroke-linecap="round"/>
 </svg>
