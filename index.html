@@ -107,14 +107,29 @@
 .u-media-coming-soon-overlay {
     position: absolute !important;
     inset: 0 !important;
-    backdrop-filter: blur(18px) !important;
-    -webkit-backdrop-filter: blur(18px) !important;
-    background-color: rgba(255, 255, 255, 0.15) !important;
+    background: #000 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     z-index: 100 !important;
     border-radius: 1.5rem !important;
+    pointer-events: auto !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    cursor: default !important;
+}
+
+.u-media-coming-soon-overlay *,
+.u-media-card-wrap,
+.u-media-card-wrap * {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-user-drag: none !important;
+}
+
+.u-media-card-wrap {
+    pointer-events: none !important;
 }
 
 .u-coming-soon-badge {
