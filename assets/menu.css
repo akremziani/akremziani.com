@@ -10,3 +10,24 @@
   border-radius:1.1rem!important;font-size:1rem!important;font-weight:600!important;background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.1)!important}
 .w-nav-overlay .s-nav-btn:hover,.w-nav-overlay .s-nav-btn[aria-current]{background:rgba(10,91,255,.22)!important;border-color:rgba(139,173,255,.45)!important}
 .s-menu-btn.w--open{background:rgba(10,91,255,.3)!important;border-color:rgba(139,173,255,.5)!important}
+
+/* Top bar: brand on the left, quiet text links, one Contact pill */
+.az-brand{order:0;display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-family:Poppins,sans-serif;font-weight:700;font-size:1rem;padding-left:.35rem;white-space:nowrap}
+.az-brand img{border-radius:.6rem;display:block}
+@media (min-width:641px){
+  .s-navbar .s-navbar-container .s-menu-btn{display:none!important}
+  .s-navbar{width:min(100%,860px)!important;padding:.4rem .4rem .4rem .6rem!important}
+  .s-navbar-container{justify-content:space-between!important}
+  .s-navbar-menu{gap:.15rem!important;align-items:center}
+  .s-navbar-menu .s-nav-btn{background:transparent!important;border:1px solid transparent!important;box-shadow:none!important;color:rgba(255,255,255,.7)!important;font-weight:500!important;padding:0 .9rem!important;border-radius:999px!important;transition:color .2s,background .2s}
+  .s-navbar-menu .s-nav-btn:hover{color:#fff!important;background:rgba(255,255,255,.07)!important}
+  .s-navbar-menu .s-nav-btn[aria-current]{color:#fff!important;background:rgba(255,255,255,.1)!important}
+  .s-navbar-menu .s-nav-btn.az-cta{margin-left:.5rem;background:#fff!important;color:#0b0b0b!important;font-weight:600!important;padding:0 1.2rem!important}
+  .s-navbar-menu .s-nav-btn.az-cta:hover{background:#e8edff!important}
+}
+@media (max-width:640px){
+  .az-brand span{display:none}
+  .s-navbar .s-navbar-container .s-menu-btn{order:3!important}
+  .s-navbar .s-navbar-container .s-navbar-menu-wrap{order:2!important;margin-left:auto!important}
+  .s-navbar .s-navbar-container{gap:.5rem!important}
+}
