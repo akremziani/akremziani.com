@@ -1,0 +1,12 @@
+/* Burger menu panel (Webflow moves the menu into .w-nav-overlay when open) */
+.w-nav-overlay{top:calc(100% + .5rem)!important;left:0!important;right:0!important;height:auto!important;overflow:visible!important}
+.w-nav-overlay [data-nav-menu-open]{display:block!important;width:100%!important;margin:0!important;padding:.6rem!important;
+  background:rgba(14,14,16,.94)!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:1.6rem!important;
+  box-shadow:0 24px 48px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08)!important;
+  -webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)!important}
+.w-nav-overlay .s-navbar-menu{display:flex!important;flex-direction:column!important;gap:.4rem!important;width:100%}
+.w-nav-overlay .s-navbar-menu .nav-extra{display:flex!important}
+.w-nav-overlay .s-nav-btn{width:100%!important;min-height:50px!important;justify-content:flex-start!important;padding:0 1.25rem!important;
+  border-radius:1.1rem!important;font-size:1rem!important;font-weight:600!important;background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.1)!important}
+.w-nav-overlay .s-nav-btn:hover,.w-nav-overlay .s-nav-btn[aria-current]{background:rgba(10,91,255,.22)!important;border-color:rgba(139,173,255,.45)!important}
+.s-menu-btn.w--open{background:rgba(10,91,255,.3)!important;border-color:rgba(139,173,255,.5)!important}
