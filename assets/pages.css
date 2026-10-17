@@ -80,7 +80,7 @@
 .az-post h3{font:700 1.15rem/1.25 Poppins,sans-serif;margin:0;color:#0b0b0b}
 .az-post p{font:400 .92rem/1.55 Inter,sans-serif;margin:0;color:#4a4a52}
 /* article */
-.az-cover{max-width:1000px;margin:-4rem auto 0;padding:0 1rem;position:relative;z-index:2}
+.az-cover{max-width:1000px;margin:3rem auto 0;padding:0 1rem;position:relative;z-index:2}
 .az-cover img{width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:1.75rem;box-shadow:0 30px 70px rgba(0,0,0,.25)}
 .az-byline{display:flex;align-items:center;gap:.85rem;max-width:720px;margin:2.5rem auto 0;padding:0 1rem}
 .az-byline img{width:3rem;height:3rem;border-radius:50%;object-fit:cover}
@@ -147,6 +147,6 @@
  .az-facts,.az-assets,.az-cols,.az-steps,.az-prose .az-trio{grid-template-columns:1fr}
  .az-tl:before{left:3.6rem}.az-tl-item{grid-template-columns:3rem 1fr;gap:1.4rem}.az-tl-card:before{left:-.95rem}
  .az-feature-body{padding:1.5rem}
- .az-cover{margin-top:-2.5rem}
+ .az-cover{margin-top:2rem}
  .az-prose{font-size:1.05rem}
 }
